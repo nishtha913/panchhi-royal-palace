@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panchhi Royal Palace</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+  (function(){
+      emailjs.init({
+          publicKey: "PMjKdH4oACEI4zxvW",
+      });
+  })();
+  </script>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Panchhi Royal Palace</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="#enquiry" class="btn-nav"><i class="fa-solid fa-phone"></i> Book Now</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Make Your Celebration<br />Truly Royal</h1>
+      <p>Where Dreams Meet Grandeur at Rohtak's Premier Wedding Destination</p>
+      <div class="hero-actions">
+        <a href="#enquiry" class="btn-primary"><i class="fa-solid fa-calendar"></i> Book Your Date</a>
+        <a href="tel:+918410855000" class="btn-secondary"><i class="fa-solid fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section light">
+    <h2>Experience Royal Grandeur</h2>
+    <p class="section-subtitle">A palace-style venue designed for your most cherished celebrations</p>
+
+    <div class="card-grid">
+      <div class="card fade-in">
+        <i class="fa-solid fa-crown"></i>
+        <h3>Royal Architecture</h3>
+        <p>Magnificent palace-style design with grand entrance and elegant interiors</p>
+      </div>
+      <div class="card fade-in">
+        <i class="fa-solid fa-users"></i>
+        <h3>Spacious Venues</h3>
+        <p>Accommodate 500–2000 guests with indoor & outdoor spaces</p>
+      </div>
+      <div class="card fade-in">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Prime Location</h3>
+        <p>Easy access from Rohtak city with parking for 200+ vehicles</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+  <h2>Our Stunning Venue</h2>
+  <p class="section-subtitle">Explore the spaces where memories are made</p>
+
+  <div class="gallery-grid">
+    <img src="images/grid-1.jpeg" />
+    <img src="images/grid-2.jpeg" />
+    <img src="images/grid-3.jpeg" />
+    <img src="images/grid-4.jpeg" />
+    <img src="images/hero-bg.jpeg" />
+    <img src="images/grid-6.jpeg" />
+  </div>
+</section>
+
+
+  <!-- Features -->
+  <section id="features" class="section light">
+    <h2>Why Choose Panchhi Royal Palace</h2>
+
+    <div class="features-grid">
+      <span>✔ Royal palace-style architecture</span>
+      <span>✔ Spacious indoor & outdoor areas</span>
+      <span>✔ Capacity: 500–2000 guests</span>
+      <span>✔ Custom décor & theme flexibility</span>
+      <span>✔ Dedicated parking for 200+ vehicles</span>
+      <span>✔ Power backup & modern amenities</span>
+      <span>✔ Professional sound & lighting</span>
+      <span>✔ Experienced on-ground support team</span>
+      <span>✔ Separate bride & groom rooms</span>
+      <span>✔ Catering services available</span>
+      <span>✔ Fully air-conditioned banquet hall</span>
+      <span>✔ Beautiful lawn for outdoor events</span>
+    </div>
+  </section>
+
+  <!-- Enquiry -->
+  <section id="enquiry" class="enquiry">
+    <div class="enquiry-box fade-in">
+      <h2>Plan Your Royal Celebration</h2>
+      <p>Fill out the form and our team will contact you within 24 hours</p>
+
+      <form id="enquiryForm" novalidate>
+
+        <div class="form-row">
+            <input
+            type="text"
+            name="name"
+            placeholder="Full Name *"
+            required
+            />
+
+            <input
+            type="tel"
+            name="phone"
+            placeholder="Mobile Number *"
+            required
+            pattern="[0-9]{10}"
+            title="Enter 10 digit mobile number"
+            />
+        </div>
+
+        <div class="form-row">
+            <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            />
+
+            <select name="eventType" required>
+            <option value="">Event Type *</option>
+            <option>Wedding</option>
+            <option>Reception</option>
+            <option>Engagement</option>
+            <option>Corporate Event</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <input
+            type="date"
+            name="date"
+            required
+            />
+
+            <input
+            type="number"
+            name="guests"
+            placeholder="Expected Guests *"
+            required
+            min="50"
+            />
+        </div>
+
+        <select name="venue">
+            <option value="">Preferred Venue Area</option>
+            <option>Indoor Hall</option>
+            <option>Outdoor Lawn</option>
+            <option>Both</option>
+        </select>
+
+        <textarea name="message" placeholder="Message / Special Requirements"></textarea>
+
+        <button type="submit">Submit Enquiry</button>
+
+      </form>
+
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><i class="fa-solid fa-location-dot"></i> Chamaria Road, Near Makrauli Toll Plaza, Rohtak</p>
+      <p><i class="fa-solid fa-phone"></i> +91-84108-55000</p>
+      <p><i class="fa-solid fa-envelope"></i> palacepanchhiroyal@gmail.com</p>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.518478643657!2d76.60430437573623!3d28.942342469944006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d8f1680584081%3A0xab4ae502e2298a49!2sPANCHHI%20ROYAL%20PALACE!5e0!3m2!1sen!2sin!4v1768549519145!5m2!1sen!2sin"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h3>Panchhi Royal Palace</h3>
+      <p>Creating royal celebrations in the heart of Rohtak</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+   <div>
+    <h4>Follow Us</h4>
+
+    <a
+        href="https://www.instagram.com/panchhi_royalpalace?igsh=bXRmaHZ1bjNrN3cy&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+    </a>
+
+    <a
+        href="https://www.facebook.com/share/18E3RhR2gz/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer">
+        Facebook
+    </a>
+  </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
