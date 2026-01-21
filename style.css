@@ -423,15 +423,25 @@ footer a:hover {
     display: none;
   }
 
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
+  .navbar .logo {
+    white-space: nowrap;
+    font-size: 1.2rem;
+  }
+
   .call-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.9rem;
     background: var(--accent);
-    padding: 0.5rem 0.8rem;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.85rem;
     border-radius: 6px;
     color: white;
+    white-space: nowrap;
   }
 
   .form-row {
