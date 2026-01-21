@@ -432,6 +432,22 @@ footer a:hover {
     font-size: 1.2rem;
   }
 
+  /* Fix navbar layout */
+  .navbar {
+    padding: 0.75rem 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Logo stays single line */
+  .navbar .logo {
+    font-size: 1.15rem;
+    white-space: nowrap;
+    flex-shrink: 1;
+  }
+
+  /* Call Now button */
   .call-btn {
     display: inline-flex;
     align-items: center;
@@ -441,7 +457,6 @@ footer a:hover {
     font-size: 0.85rem;
     border-radius: 6px;
     color: white;
-    white-space: nowrap;
   }
 
   .form-row {
