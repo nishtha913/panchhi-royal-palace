@@ -56,8 +56,12 @@ if (enquiryForm) {
 
   const dateInput = enquiryForm.querySelector('input[type="date"]');
   if (dateInput) {
-    dateInput.min = new Date().toISOString().split('T')[0];
-  }
+  const today = new Date().toISOString().split('T')[0];
+
+  dateInput.min = today;   
+  dateInput.value = today; 
+}
+
 
   enquiryForm.addEventListener("submit", function (e) {
     e.preventDefault();
