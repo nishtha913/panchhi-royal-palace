@@ -30,15 +30,36 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">Panchhi Royal Palace</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav">
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
 
-    <a href="tel:+918410855000" class="btn-nav call-btn"><i class="fa-solid fa-phone"></i> Call Now</a>
+    <!-- Call Now Button -->
+    <a href="tel:+918410855000" class="call-btn">
+      <i class="fa-solid fa-phone"></i> Call Now
+    </a>
+
+    <!-- Hamburger -->
+    <button class="menu-toggle" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu">
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
   </header>
+
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -46,7 +67,7 @@
       <h1>Make Your Celebration<br />Truly Royal</h1>
       <p>Where Dreams Meet Grandeur at Rohtak's Premier Wedding Destination</p>
       <div class="hero-actions">
-        <a href="#enquiry" class="btn-primary"><i class="fa-solid fa-calendar"></i> Book Your Date</a>
+        <a href="contact.html" class="btn-primary"><i class="fa-solid fa-calendar"></i> Book Your Date</a>
       </div>
     </div>
   </section>
@@ -81,118 +102,42 @@
   <p class="section-subtitle">Explore the spaces where memories are made</p>
 
   <div class="gallery-grid">
-    <img src="images/grid-1.jpeg" />
-    <img src="images/grid-2.jpeg" />
-    <img src="images/grid-3.jpeg" />
-    <img src="images/grid-4.jpeg" />
     <img src="images/hero-bg.jpeg" />
-    <img src="images/grid-6.jpeg" />
+    <img src="images/home-grid-2.jpeg" />
+    <img src="images/home-grid-4.jpeg" />
+  </div>
+
+  <div class="gallery-cta">
+  <a href="gallery.html" class="cta-btn"><i class="fa-solid fa-images"></i>View Full Gallery</a>
+</div>
+</section>
+
+  <!-- Enquiry -->
+  <section class="enquiry-cta">
+  <div class="enquiry-overlay">
+
+    <h2>Plan Your Royal Celebration</h2>
+    <p>Fill out the form and our team will contact you within 24 hours</p>
+
+    <a href="contact.html" class="cta-btn">
+      <i class="fa-solid fa-envelope"></i>
+      Enquire Now
+    </a>
+
   </div>
 </section>
 
 
-  <!-- Features -->
-  <section id="features" class="section light">
-    <h2>Why Choose Panchhi Royal Palace?</h2>
-
-    <div class="features-grid">
-      <span>Royal palace-style architecture</span>
-      <span>Spacious indoor & outdoor areas</span>
-      <span>Capacity: 500–2000 guests</span>
-      <span>Elegant entrance and welcoming ambience</span>
-      <span>Dedicated parking for 200+ vehicles</span>
-      <span>Power backup & modern amenities</span>
-      <span>Professional sound & lighting</span>
-      <span>Experienced on-ground support team</span>
-      <span>Separate bride & groom rooms</span>
-      <span>Catering services available</span>
-      <span>Fully air-conditioned banquet hall</span>
-      <span>Beautiful lawn for outdoor events</span>
-    </div>
-  </section>
-
-  <!-- Enquiry -->
-  <section id="enquiry" class="enquiry">
-    <div class="enquiry-box fade-in">
-      <h2>Plan Your Royal Celebration</h2>
-      <p>Fill out the form and our team will contact you within 24 hours</p>
-
-      <form id="enquiryForm" novalidate>
-
-        <div class="form-row">
-            <input
-            type="text"
-            name="name"
-            placeholder="Full Name *"
-            required
-            />
-
-            <input
-            type="tel"
-            name="phone"
-            placeholder="Mobile Number *"
-            required
-            pattern="[0-9]{10}"
-            title="Enter 10 digit mobile number"
-            />
-        </div>
-
-        <div class="form-row">
-            <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            />
-
-            <select name="eventType" required>
-            <option value="">Event Type *</option>
-            <option>Wedding</option>
-            <option>Reception</option>
-            <option>Engagement</option>
-            <option>Corporate Event</option>
-            </select>
-        </div>
-
-        <div class="form-row">
-            <input
-            type="date"
-            name="date"
-            required
-            />
-
-            <input
-            type="number"
-            name="guests"
-            placeholder="Expected Guests *"
-            required
-            min="50"
-            />
-        </div>
-
-        <select name="venue">
-            <option value="">Preferred Venue Area</option>
-            <option>Indoor Hall</option>
-            <option>Outdoor Lawn</option>
-            <option>Both</option>
-        </select>
-
-        <textarea name="message" placeholder="Message / Special Requirements"></textarea>
-
-        <button type="submit">Submit Enquiry</button>
-
-      </form>
-
-
-    </div>
-  </section>
-
   <!-- Contact -->
   <section id="contact" class="section contact">
-    <div class="contact-info">
+     <div class="contact-info">
       <h2>Get in Touch</h2>
-      <p><i class="fa-solid fa-location-dot"></i> Chamaria Road, Near Makrauli Toll Plaza, Rohtak</p>
-      <p><i class="fa-solid fa-phone"></i> +91-84108-55000</p>
-      <p><i class="fa-solid fa-envelope"></i> palacepanchhiroyal@gmail.com</p>
+      <p class="contact-item"><i class="fa-solid fa-location-dot"></i> <span>Chamaria Road, Near Makrauli Toll Plaza, Rohtak</span></p>
+      <p class="contact-item"><i class="fa-solid fa-phone"></i> <span>+91-84108-55000</span></p>
+      <a href="mailto:palacepanchhiroyal@gmail.com" class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <span>palacepanchhiroyal@gmail.com</span>
+      </a>
     </div>
 
     <div class="map-container">
@@ -215,10 +160,10 @@
 
     <div>
       <h4>Quick Links</h4>
-      <a href="#about">About</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
     </div>
 
    <div>

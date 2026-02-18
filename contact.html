@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Panchhi Royal Palace</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+  (function(){
+      emailjs.init({
+          publicKey: "PMjKdH4oACEI4zxvW",
+      });
+  })();
+  </script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Panchhi Royal Palace</div>
+
+  <nav class="desktop-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <a href="tel:+918410855000" class="call-btn">
+    <i class="fa-solid fa-phone"></i> Call Now
+  </a>
+
+  <button class="menu-toggle">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- ================= CONTACT TITLE ================= -->
+
+<section class="contact-title section light">
+  <h2>Contact Us</h2>
+</section>
+
+<!-- ================= ENQUIRY FORM ================= -->
+
+<section id="enquiry" class="enquiry">
+  <div class="enquiry-box fade-in">
+
+    <h2>Plan Your Royal Celebration</h2>
+    <p>Fill out the form and our team will contact you within 24 hours</p>
+
+    <form id="enquiryForm" novalidate>
+
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Full Name *" required>
+        <input type="tel" name="phone" placeholder="Mobile Number *" required>
+      </div>
+
+      <div class="form-row">
+        <input type="email" name="email" placeholder="Email Address">
+        <select name="eventType" required>
+          <option value="">Event Type *</option>
+          <option>Wedding</option>
+          <option>Reception</option>
+          <option>Engagement</option>
+          <option>Corporate Event</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <input type="date" name="date" required>
+        <input type="number" name="guests" placeholder="Expected Guests *" required>
+      </div>
+
+      <textarea name="message" placeholder="Message / Special Requirements"></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+
+    </form>
+
+  </div>
+</section>
+
+<!-- ================= GET IN TOUCH ================= -->
+
+<section id="contact" class="contact">
+
+  <div class="contact-info">
+    <h2>Get in Touch</h2>
+
+    <p class="contact-item">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Chamaria Road, Near Makrauli Toll Plaza, Rohtak</span>
+    </p>
+
+    <p class="contact-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>+91-84108-55000</span>
+    </p>
+
+    <p class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>palacepanchhiroyal@gmail.com</span>
+    </p>
+
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.518478643657!2d76.60430437573623!3d28.942342469944006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d8f1680584081%3A0xab4ae502e2298a49!2sPANCHHI%20ROYAL%20PALACE!5e0!3m2!1sen!2sin!4v1768549519145!5m2!1sen!2sin"
+      loading="lazy">
+    </iframe>
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+  <div>
+    <h3>Panchhi Royal Palace</h3>
+    <p>Creating royal celebrations in the heart of Rohtak</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faqs.html">FAQs</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+   <div>
+    <h4>Follow Us</h4>
+
+    <a
+        href="https://www.instagram.com/panchhi_royalpalace?igsh=bXRmaHZ1bjNrN3cy&utm_source=qr"
+        target="_blank"
+        rel="noopener noreferrer">
+        Instagram
+    </a>
+
+    <a
+        href="https://www.facebook.com/share/18E3RhR2gz/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer">
+        Facebook
+    </a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

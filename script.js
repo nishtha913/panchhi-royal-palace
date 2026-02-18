@@ -1,6 +1,6 @@
 /* ===============================
    GO TO TOP ON REFRESH
-   =============================== */
+=============================== */
 
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
@@ -11,7 +11,6 @@ window.addEventListener('load', () => {
     history.replaceState(null, '', window.location.pathname);
   }
 
-  // Safari needs delay
   setTimeout(() => {
     window.scrollTo(0, 0);
   }, 60);
@@ -22,36 +21,39 @@ window.onbeforeunload = () => {
 };
 
 
+
 /* ===============================
    FADE-IN ANIMATION
-   =============================== */
+=============================== */
 
 const faders = document.querySelectorAll('.fade-in');
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // animate once
-      }
-    });
-  },
-  { threshold: 0.2 }
-);
+if (faders.length > 0) {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-faders.forEach(el => observer.observe(el));
+  faders.forEach(el => observer.observe(el));
+}
+
 
 
 /* ===============================
    ENQUIRY FORM
-   =============================== */
+=============================== */
 
 const enquiryForm = document.getElementById("enquiryForm");
 
 if (enquiryForm) {
 
-  // Prevent past dates
   const dateInput = enquiryForm.querySelector('input[type="date"]');
   if (dateInput) {
     dateInput.min = new Date().toISOString().split('T')[0];
@@ -60,7 +62,6 @@ if (enquiryForm) {
   enquiryForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Mandatory validation
     if (
       !this.name.value.trim() ||
       !this.phone.value.trim() ||
@@ -76,7 +77,6 @@ if (enquiryForm) {
     btn.disabled = true;
     btn.innerText = "Sending...";
 
-    // Send enquiry email (ADMIN)
     emailjs.sendForm(
       "service_rve0a19",
       "template_jwl74q9",
@@ -95,4 +95,74 @@ if (enquiryForm) {
       btn.innerText = "Submit Enquiry";
     });
   });
+}
+
+
+
+/* =====================
+   Mobile Dropdown Menu
+===================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
+
+  if (menuToggle && mobileMenu) {
+
+    mobileMenu.style.maxHeight = "0";
+
+    menuToggle.addEventListener("click", () => {
+
+      mobileMenu.classList.toggle("show");
+
+      mobileMenu.style.maxHeight = mobileMenu.classList.contains("show")
+        ? mobileMenu.scrollHeight + "px"
+        : "0";
+
+      menuToggle.innerHTML = mobileMenu.classList.contains("show")
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("show");
+        mobileMenu.style.maxHeight = "0";
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+  }
+});
+
+
+
+/* =====================
+   FAQs Expand/Collapse
+===================== */
+
+const faqButtons = document.querySelectorAll(".faq-question");
+
+if (faqButtons.length > 0) {
+
+  faqButtons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector(".faq-icon");
+
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        if (icon) icon.textContent = "▼";
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        if (icon) icon.textContent = "▲";
+      }
+
+    });
+
+  });
+
 }
