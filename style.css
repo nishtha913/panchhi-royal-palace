@@ -492,25 +492,54 @@ footer a:hover {
 .service-card {
   min-width: 220px;
   height: 140px;
-
-  background:
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/hero-bg.jpeg") center/cover no-repeat;
-
   border-radius: 16px;
   overflow: hidden;  
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
   font-weight: 600;
   font-size: 1.2rem;
   color: white;
-
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   scroll-snap-align: start;
   transition: transform 0.3s ease;
+}
+
+.card1 {
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/hero-bg.jpeg") center/cover no-repeat;
+}
+
+.card2 {
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/home-grid-1.jpeg") center/cover no-repeat;
+}
+
+.card3 {
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/home-grid-2.jpeg") center/cover no-repeat;
+}
+
+.card4 {
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/home-grid-4.jpeg") center/cover no-repeat;
+}
+
+.card5 {
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/gallery_page/grid-3.jpeg") center/cover no-repeat;
+}
+
+.card6 {
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/gallery_page/grid-7.jpeg") center/cover no-repeat;
 }
 
 /* =========================================
