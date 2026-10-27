@@ -133,7 +133,7 @@ body {
 ===================== */
 .hero {
   height: 95vh;
-  background: url("images/hero-bg.jpeg") center/cover no-repeat;
+  background: url("/images/hero-bg.jpeg") center/cover no-repeat;
   position: relative;
 }
 
@@ -331,7 +331,7 @@ body {
 .enquiry-cta {
   position: relative;
   min-height: 80vh;
-  background: url("images/home-grid-1.jpeg") center/cover no-repeat;
+  background: url("/images/home-grid-1.jpeg") center/cover no-repeat;
 }
 
 .enquiry-overlay {
@@ -509,37 +509,37 @@ footer a:hover {
 .card1 {
     background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/hero-bg.jpeg") center/cover no-repeat;
+    url("/images/hero-bg.jpeg") center/cover no-repeat;
 }
 
 .card2 {
     background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/home-grid-1.jpeg") center/cover no-repeat;
+    url("/images/home-grid-1.jpeg") center/cover no-repeat;
 }
 
 .card3 {
     background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/home-grid-2.jpeg") center/cover no-repeat;
+    url("/images/home-grid-2.jpeg") center/cover no-repeat;
 }
 
 .card4 {
     background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/home-grid-4.jpeg") center/cover no-repeat;
+    url("/images/home-grid-4.jpeg") center/cover no-repeat;
 }
 
 .card5 {
     background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/gallery_page/grid-3.jpeg") center/cover no-repeat;
+    url("/images/gallery_page/grid-3.jpeg") center/cover no-repeat;
 }
 
 .card6 {
     background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("images/gallery_page/grid-7.jpeg") center/cover no-repeat;
+    url("/images/gallery_page/grid-7.jpeg") center/cover no-repeat;
 }
 
 /* =========================================
@@ -624,7 +624,7 @@ footer a:hover {
 }
 
 .enquiry {
-  background: url(images/home-grid-1.jpeg) center/cover no-repeat;
+  background: url("/images/home-grid-1.jpeg") center/cover no-repeat;
   padding: 8rem 2rem;
 }
 
