@@ -10,10 +10,6 @@ const faqs = [
     a: 'Panchhi Royal Palace is an exquisite wedding and event venue in Rohtak, capable of hosting grand celebrations for 1,500+ guests.',
   },
   {
-    q: 'What is the catering price per plate at Panchhi Royal Palace?',
-    a: 'Catering services start from ₹800 per plate with a refined selection of cuisines.',
-  },
-  {
     q: 'What types of events can be hosted?',
     a: 'Weddings, receptions, engagements, cocktail parties, corporate events, and social gatherings.',
   },

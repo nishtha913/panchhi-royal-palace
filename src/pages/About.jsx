@@ -17,7 +17,7 @@ const features = [
   'Capacity: 500-2000 guests',
   'Spacious indoor & outdoor areas',
   'Fully air-conditioned hall',
-  'Dedicated parking for 200+ vehicles',
+  'Dedicated parking for 130+ vehicles',
   'Professional sound & lighting',
   'Catering services available',
   'Separate bride & groom rooms',
@@ -51,7 +51,7 @@ export default function About() {
 
           <p>
             Conveniently located near Chamaria Road, Rohtak, with dedicated parking
-            space for over 200 vehicles, we ensure your guests experience both comfort
+            space for over 130 vehicles, we ensure your guests experience both comfort
             and convenience.
           </p>
         </div>

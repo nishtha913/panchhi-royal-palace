@@ -15,6 +15,7 @@ const today = () => new Date().toISOString().split('T')[0];
 function EnquiryForm() {
   const formRef = useRef(null);
   const [sending, setSending] = useState(false);
+  const [otherEvent, setOtherEvent] = useState(false);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -25,7 +26,7 @@ function EnquiryForm() {
       !form.elements.name.value.trim() ||
       !form.elements.phone.value.trim() ||
       !form.elements.date.value ||
-      !form.elements.eventType.value ||
+      !form.elements.eventType.value.trim() ||
       !form.elements.guests.value
     ) {
       alert("Please fill all required fields marked with *");
@@ -43,6 +44,7 @@ function EnquiryForm() {
       alert("Thank you! Your enquiry has been sent.");
       form.reset();
       form.classList.remove('submitted');
+      setOtherEvent(false);
     })
     .catch((error) => {
       console.error(error);
@@ -63,14 +65,26 @@ function EnquiryForm() {
 
       <div className="form-row">
         <input type="email" name="email" placeholder="Email Address" />
-        <select name="eventType" required defaultValue="">
+        {/* When "Other" is picked, the text box below carries the eventType value instead */}
+        <select
+          name={otherEvent ? 'eventTypeChoice' : 'eventType'}
+          required
+          defaultValue=""
+          onChange={e => setOtherEvent(e.target.value === 'Other')}
+        >
           <option value="">Event Type *</option>
           <option>Wedding</option>
           <option>Reception</option>
           <option>Engagement</option>
           <option>Corporate Event</option>
+          <option>Birthday</option>
+          <option>Other</option>
         </select>
       </div>
+
+      {otherEvent && (
+        <input type="text" name="eventType" placeholder="Please specify event type *" required autoFocus />
+      )}
 
       <div className="form-row">
         <input type="date" name="date" required min={today()} defaultValue={today()} />

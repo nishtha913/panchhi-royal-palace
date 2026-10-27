@@ -205,15 +205,15 @@ textarea {
 }
 
 .hero-overlay {
-  background: linear-gradient(to top, rgba(20, 32, 30, 0.82) 0%, rgba(20, 32, 30, 0.45) 55%, rgba(20, 32, 30, 0.25) 100%);
+  background: linear-gradient(to top, rgba(20, 32, 30, 0.88) 0%, rgba(20, 32, 30, 0.68) 55%, rgba(20, 32, 30, 0.55) 100%);
   flex: 1;
   color: var(--on-dark);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  text-align: left;
-  padding: 0 2.5rem 3.5rem 5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 2.5rem;
 }
 
 .hero h1 {
@@ -228,6 +228,7 @@ textarea {
 .hero p {
   font-size: 1.6rem;
   max-width: 640px;
+  margin-inline: auto;
   margin-bottom: 2.5rem;
   opacity: 0.92;
 }
@@ -1149,7 +1150,7 @@ button:disabled {
   }
 
   .hero-overlay {
-    padding: 0 1.25rem 2.5rem 1.75rem;
+    padding: 2.5rem 1.25rem;
   }
 
   .hero p {

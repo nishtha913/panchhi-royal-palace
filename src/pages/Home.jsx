@@ -8,7 +8,7 @@ import { MAP_SRC } from '../map';
 // TODO: replace these placeholders with real guest reviews before going live
 const stats = [
   { value: '500–2000', label: 'Guest Capacity' },
-  { value: '200+', label: 'Cars Parking' },
+  { value: '130+', label: 'Cars Parking' },
   { value: '6', label: 'Event Types' },
   { value: 'Indoor & Outdoor', label: 'Venue Spaces' },
 ];
