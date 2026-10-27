@@ -99,6 +99,16 @@ export default function Home() {
       </section>
 
       <Footer links={homeLinks} />
+
+      {/* WhatsApp Chat */}
+      <a
+        href="https://wa.me/917450059009"
+        className="whatsapp-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp">
+        <i className="fa-brands fa-whatsapp"></i> Chat Now
+      </a>
     </>
   );
 }
