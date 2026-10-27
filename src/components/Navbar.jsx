@@ -1,15 +1,27 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 /* cta: "call" (Call Now → phone) or "book" (Book Now → contact page) */
 export default function Navbar({ links, cta = 'book' }) {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
+  const headerRef = useRef(null);
+
+  // Expose navbar height so the hero can fill the rest of the screen
+  useEffect(() => {
+    const header = headerRef.current;
+    const update = () =>
+      document.documentElement.style.setProperty('--nav-h', header.offsetHeight + 'px');
+    update();
+    const observer = new ResizeObserver(update);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
 
   const maxHeight = open && menuRef.current ? menuRef.current.scrollHeight + 'px' : '0';
 
   return (
-    <header className="navbar">
+    <header className="navbar" ref={headerRef}>
       <div className="logo">Panchhi Royal Palace</div>
 
       {/* Desktop Nav */}

@@ -5,10 +5,18 @@ import usePageSetup from '../usePageSetup';
 import { homeLinks } from '../links';
 import { MAP_SRC } from '../map';
 
+// TODO: replace these placeholders with real guest reviews before going live
+const stats = [
+  { value: '500–2000', label: 'Guest Capacity' },
+  { value: '200+', label: 'Cars Parking' },
+  { value: '6', label: 'Event Types' },
+  { value: 'Indoor & Outdoor', label: 'Venue Spaces' },
+];
+
 const testimonials = [
-  { quote: 'Attended wedding at Panchhi Royal Palace they had royal setup for mandap and catering. Food tasted pretty awesome. One of the best catering I have tasted in Rohtak. Whole banquet gives you luxury vibes. Best wedding venue to get married in Rohtak.', name: 'Hardeep Singh' },
-  { quote: 'It was a fantastic arrangements and management in the Royal Palace. All staff remains cooperative spcially Hardip. We will keep in touch for the next event. Very very thanks!', name: 'Raj Singh' },
-  { quote: 'It is a very nice palace for a wedding. The decoration is also very lovely and the bridal entry was also very lovely.', name: 'Sumetra Devi' },
+  { quote: 'Attended wedding at Panchhi Royal Palace they had royal setup for mandap and catering. Food tasted pretty awesome. One of the best catering I have tasted in Rohtak. Whole banquet gives you luxury vibes. Best wedding venue to get married in Rohtak.', name: 'Hardeep Singh', event: 'Event, Month Year' },
+  { quote: 'It was a fantastic arrangements and management in the Royal Palace. All staff remains cooperative spcially Hardip. We will keep in touch for the next event. Very very thanks!', name: 'Raj Singh', event: 'Event, Month Year' },
+  { quote: 'It is a very nice palace for a wedding. The decoration is also very lovely and the bridal entry was also very lovely.', name: 'Sumetra Devi', event: 'Event, Month Year' },
 ];
 
 export default function Home() {
@@ -29,6 +37,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="stats">
+        {stats.map(stat => (
+          <div key={stat.label} className="stat">
+            <div className="stat-value">{stat.value}</div>
+            <div className="stat-label">{stat.label}</div>
+          </div>
+        ))}
+      </section>
+
       {/* Gallery */}
       <section id="gallery" className="section">
         <h2>Our Stunning Venue</h2>
@@ -45,32 +63,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="section dark">
-        <h2>Experience Royal Grandeur</h2>
-        <p className="section-subtitle">A palace-style venue designed for your most cherished celebrations</p>
-
-        <div className="card-grid">
-          <div className="card fade-in">
-            <i className="fa-solid fa-crown"></i>
-            <h3>Royal Architecture</h3>
-            <p>Magnificent palace-style design with grand entrance and elegant interiors</p>
-          </div>
-          <div className="card fade-in">
-            <i className="fa-solid fa-users"></i>
-            <h3>Spacious Venues</h3>
-            <p>Accommodate <b>500–2000</b> guests with indoor &amp; outdoor spaces</p>
-          </div>
-          <div className="card fade-in">
-            <i className="fa-solid fa-location-dot"></i>
-            <h3>Prime Location</h3>
-            <p>Easy access from Rohtak city with parking for <b>200+</b> vehicles</p>
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials */}
-      <section id="testimonials" className="section">
+      <section id="testimonials" className="section dark">
         <h2>What Our Guests Say</h2>
 
         <div className="testimonial-grid">
@@ -79,6 +73,7 @@ export default function Home() {
               <div className="quote-mark">&ldquo;</div>
               <blockquote>{t.quote}</blockquote>
               <div className="testimonial-name">{t.name}</div>
+              <div className="testimonial-event">{t.event}</div>
             </div>
           ))}
         </div>
