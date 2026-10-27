@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 /* cta: "call" (Call Now → phone) or "book" (Book Now → contact page) */
 export default function Navbar({ links, cta = 'book' }) {
@@ -15,7 +15,7 @@ export default function Navbar({ links, cta = 'book' }) {
       {/* Desktop Nav */}
       <nav className="desktop-nav">
         {links.map(link => (
-          <Link key={link.to} to={link.to}>{link.label}</Link>
+          <NavLink key={link.to} to={link.to} end>{link.label}</NavLink>
         ))}
       </nav>
 
@@ -41,7 +41,7 @@ export default function Navbar({ links, cta = 'book' }) {
         style={{ maxHeight }}
       >
         {links.map(link => (
-          <Link key={link.to} to={link.to} onClick={() => setOpen(false)}>{link.label}</Link>
+          <NavLink key={link.to} to={link.to} end onClick={() => setOpen(false)}>{link.label}</NavLink>
         ))}
       </div>
     </header>

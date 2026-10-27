@@ -86,7 +86,7 @@ function FaqItem({ question, answer }) {
         className="faq-answer"
         style={open && answerRef.current ? { maxHeight: answerRef.current.scrollHeight + 'px' } : undefined}
       >
-        {answer}
+        <div className="faq-answer-inner">{answer}</div>
       </div>
     </div>
   );

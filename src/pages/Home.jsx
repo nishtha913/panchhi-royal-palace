@@ -5,6 +5,12 @@ import usePageSetup from '../usePageSetup';
 import { homeLinks } from '../links';
 import { MAP_SRC } from '../map';
 
+const testimonials = [
+  { quote: 'Attended wedding at Panchhi Royal Palace they had royal setup for mandap and catering. Food tasted pretty awesome. One of the best catering I have tasted in Rohtak. Whole banquet gives you luxury vibes. Best wedding venue to get married in Rohtak.', name: 'Hardeep Singh' },
+  { quote: 'It was a fantastic arrangements and management in the Royal Palace. All staff remains cooperative spcially Hardip. We will keep in touch for the next event. Very very thanks!', name: 'Raj Singh' },
+  { quote: 'It is a very nice palace for a wedding. The decoration is also very lovely and the bridal entry was also very lovely.', name: 'Sumetra Devi' },
+];
+
 export default function Home() {
   usePageSetup('Panchhi Royal Palace');
 
@@ -23,8 +29,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section id="gallery" className="section">
+        <h2>Our Stunning Venue</h2>
+        <p className="section-subtitle">Explore the spaces where memories are made</p>
+
+        <div className="gallery-grid">
+          <img src="/images/hero-bg.jpeg" />
+          <img src="/images/home-grid-2.jpeg" />
+          <img src="/images/home-grid-4.jpeg" />
+        </div>
+
+        <div className="gallery-cta">
+          <Link to="/gallery" className="cta-btn"><i className="fa-solid fa-images"></i>View Full Gallery</Link>
+        </div>
+      </section>
+
       {/* About */}
-      <section id="about" className="section light">
+      <section id="about" className="section dark">
         <h2>Experience Royal Grandeur</h2>
         <p className="section-subtitle">A palace-style venue designed for your most cherished celebrations</p>
 
@@ -47,19 +69,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section id="gallery" className="section">
-        <h2>Our Stunning Venue</h2>
-        <p className="section-subtitle">Explore the spaces where memories are made</p>
+      {/* Testimonials */}
+      <section id="testimonials" className="section">
+        <h2>What Our Guests Say</h2>
 
-        <div className="gallery-grid">
-          <img src="/images/hero-bg.jpeg" />
-          <img src="/images/home-grid-2.jpeg" />
-          <img src="/images/home-grid-4.jpeg" />
-        </div>
-
-        <div className="gallery-cta">
-          <Link to="/gallery" className="cta-btn"><i className="fa-solid fa-images"></i>View Full Gallery</Link>
+        <div className="testimonial-grid">
+          {testimonials.map((t, i) => (
+            <div key={i} className="testimonial fade-in">
+              <div className="quote-mark">&ldquo;</div>
+              <blockquote>{t.quote}</blockquote>
+              <div className="testimonial-name">{t.name}</div>
+            </div>
+          ))}
         </div>
       </section>
 

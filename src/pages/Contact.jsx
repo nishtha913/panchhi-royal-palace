@@ -19,6 +19,7 @@ function EnquiryForm() {
   const handleSubmit = e => {
     e.preventDefault();
     const form = formRef.current;
+    form.classList.add('submitted');
 
     if (
       !form.elements.name.value.trim() ||
@@ -41,6 +42,7 @@ function EnquiryForm() {
     .then(() => {
       alert("Thank you! Your enquiry has been sent.");
       form.reset();
+      form.classList.remove('submitted');
     })
     .catch((error) => {
       console.error(error);
@@ -92,7 +94,7 @@ export default function Contact() {
 
       {/* ================= CONTACT TITLE ================= */}
 
-      <section className="contact-title section light">
+      <section className="contact-title section">
         <h2>Contact Us</h2>
       </section>
 
