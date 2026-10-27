@@ -14,9 +14,9 @@ const stats = [
 ];
 
 const testimonials = [
-  { quote: 'Attended wedding at Panchhi Royal Palace they had royal setup for mandap and catering. Food tasted pretty awesome. One of the best catering I have tasted in Rohtak. Whole banquet gives you luxury vibes. Best wedding venue to get married in Rohtak.', name: 'Hardeep Singh', event: 'Event, Month Year' },
-  { quote: 'It was a fantastic arrangements and management in the Royal Palace. All staff remains cooperative spcially Hardip. We will keep in touch for the next event. Very very thanks!', name: 'Raj Singh', event: 'Event, Month Year' },
-  { quote: 'It is a very nice palace for a wedding. The decoration is also very lovely and the bridal entry was also very lovely.', name: 'Sumetra Devi', event: 'Event, Month Year' },
+  { quote: 'Attended wedding at Panchhi Royal Palace they had royal setup for mandap and catering. Food tasted pretty awesome. One of the best catering I have tasted in Rohtak. Whole banquet gives you luxury vibes. Best wedding venue to get married in Rohtak.', name: 'Hardeep Singh' },
+  { quote: 'It was a fantastic arrangements and management in the Royal Palace. All staff remains cooperative spcially Hardip. We will keep in touch for the next event. Very very thanks!', name: 'Raj Singh' },
+  { quote: 'It is a very nice palace for a wedding. The decoration is also very lovely and the bridal entry was also very lovely.', name: 'Sumetra Devi' },
 ];
 
 export default function Home() {
@@ -73,7 +73,6 @@ export default function Home() {
               <div className="quote-mark">&ldquo;</div>
               <blockquote>{t.quote}</blockquote>
               <div className="testimonial-name">{t.name}</div>
-              <div className="testimonial-event">{t.event}</div>
             </div>
           ))}
         </div>
