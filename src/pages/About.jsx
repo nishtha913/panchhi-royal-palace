@@ -55,6 +55,8 @@ export default function About() {
             and convenience.
           </p>
         </div>
+
+        <p className="page-tagline">Panchhi Royal Palace &ndash; A Unit of Panchhi Banquets</p>
       </section>
 
       {/* ================= OUR SERVICES ================= */}

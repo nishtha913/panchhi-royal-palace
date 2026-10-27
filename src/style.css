@@ -809,6 +809,15 @@ footer a:hover {
   color: var(--ink);
 }
 
+.page-tagline {
+  margin: 3rem 0 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--gold);
+}
+
 .about-paragraph {
   max-width: 900px;
   margin: auto;
@@ -1197,6 +1206,11 @@ button:disabled {
   }
 
   /* ABOUT PAGE */
+
+  .page-tagline {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
 
   .about-paragraph p {
     font-size: 1.2rem;
